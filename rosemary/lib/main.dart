@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import './pages/home_screen.dart';
 
 void main(){
   runApp(Rosemary());
@@ -36,7 +36,7 @@ children: [
   Text("RoseMary",   style: GoogleFonts.josefinSans(fontSize: 55, color: Color(0xFF14AA87)),),
   Text("Ancient wisdom, Modern wellness",  style: GoogleFonts.josefinSans(fontSize: 16,color: Colors.black),),
   SizedBox(height: 20,),
-  ElevatedButton(onPressed: (){}, child:Text("Get Started", style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.white),), style: ElevatedButton.styleFrom(backgroundColor: Color(0xFF14AA87)), )
+  ElevatedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()));}, child:Text("Get Started", style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.white),), style: ElevatedButton.styleFrom(backgroundColor: Color(0xFF14AA87)), )
 
 ],
 
