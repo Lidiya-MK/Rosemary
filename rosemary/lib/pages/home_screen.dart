@@ -61,19 +61,35 @@ Padding(padding: EdgeInsets.only(left: 16, top: 16), child: Text("Welcome", styl
       Text("Categories", style: GoogleFonts.josefinSans(fontSize: 35),)
     ],), ),
    
-    Row(children: [
+   Padding(padding: EdgeInsets.all(24), child: Column(children: [
+  Row(children: [
       
-     Padding(padding: EdgeInsets.all(14), child:  Card(color: Color(0xFF14AA87),child:Padding(padding: EdgeInsets.all(18), child: Row(children: [Image.asset("assets/herb_white.png", height: 24,), Text("Herbs", style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.white),)],)) ),),
-         Padding(padding: EdgeInsets.all(14), child:  Card(color: Color(0xFF14AA87),child:Padding(padding: EdgeInsets.all(18), child: Row(children: [Image.asset("assets/seed_white.png", height: 32,), Text("Seeds", style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.white),)],)) ),)
+     SizedBox(height: 100,width: 150, child:  Card(elevation: 20, color: Color(0xFF14AA87),child:Padding(padding: EdgeInsets.all(10), child: Row(children: [Image.asset("assets/herb_white.png", height: 24,), Text("Herbs", style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.white),)],)) ),),
+         SizedBox(height: 100,width: 150,child:  Card(elevation: 20,color: Color(0xFF14AA87),child:Padding(padding: EdgeInsets.all(10), child: Row(children: [Image.asset("assets/seed_white.png", height: 32,), Text("Seeds", style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.white),)],)) ),)
     ],),
      Row(children: [
       
-     Padding(padding: EdgeInsets.all(14), child:  Card(color: Color(0xFF14AA87),child:Padding(padding: EdgeInsets.all(18), child: Row(children: [Image.asset("assets/cereal_white.png", height: 32,), Text("Cereals", style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.white),)],)) ),),
-         Padding(padding: EdgeInsets.all(14), child:  Card(color: Color(0xFF14AA87),child:Padding(padding: EdgeInsets.all(18), child: Row(children: [Image.asset("assets/f&v_white.png", height: 32,), Text("Fruits & \nVegetables", style: GoogleFonts.josefinSans(fontSize: 15, color: Colors.white ,),textAlign: TextAlign.center,)],)) ),)
+     SizedBox(height: 100,width: 150,child:  Card(elevation: 20,color: Color(0xFF14AA87),child:Padding(padding: EdgeInsets.all(10), child: Row(children: [Image.asset("assets/cereal_white.png", height: 32,), Text("Cereals", style: GoogleFonts.josefinSans(fontSize: 20, color: Colors.white),)],)) ),),
+         SizedBox(height: 100,width: 150,child:  Card(elevation: 20,color: Color(0xFF14AA87),child:Padding(padding: EdgeInsets.all(10), child: Row(children: [Image.asset("assets/f&v_white.png", height: 32,), Text("Fruits & \nVegetables", style: GoogleFonts.josefinSans(fontSize: 15, color: Colors.white ,),textAlign: TextAlign.center,)],)) ),)
     ],)
+   ],),)
+  
   ],
 ),
-
+bottomNavigationBar:Padding(padding: EdgeInsets.all(24), child: Container(
+  decoration: BoxDecoration(border: Border(top: BorderSide(color: Color(0xFF14AA87)))),
+  child: BottomNavigationBar(
+ type: BottomNavigationBarType.fixed, 
+      selectedItemColor: Colors.black,     
+      unselectedItemColor: Colors.grey, 
+items: [
+    BottomNavigationBarItem(icon: Image.asset("assets/home.png", height: 24,), label: "Home",),
+       BottomNavigationBarItem(icon: Image.asset("assets/herbs.png", height: 24,), label: "Herbs"),
+          BottomNavigationBarItem(icon: Image.asset("assets/seeds.png", height: 24,), label: "Seeds"),
+             BottomNavigationBarItem(icon: Image.asset("assets/cereals.png", height: 24,), label: "Cereals"),
+                BottomNavigationBarItem(icon: Image.asset("assets/f&v.png", height: 24,), label: "F&V"),
+  ]),
+),) 
 
 )
     );
