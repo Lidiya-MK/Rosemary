@@ -13,7 +13,28 @@ Scaffold(
     leading: Padding(child: Image.asset("assets/logo.png",), padding:EdgeInsets.only(left: 20, ),),
     leadingWidth: 56,
     title:Padding(padding: EdgeInsets.only(left: 0), child:Text("RoseMary", style: GoogleFonts.josefinSans(fontSize: 24),) ,),
-    actions: [Padding(padding: EdgeInsets.only(right: 20),child: Icon(Icons.menu),)],
+   
+  ),
+  endDrawer: Drawer(
+    child: ListView(
+      children: [
+        DrawerHeader( decoration: BoxDecoration(color: Color(0xFF14AA87)),child: 
+        Align(alignment: Alignment.bottomCenter,child:  Text("Menu", style: GoogleFonts.josefinSans(fontSize: 36, color: Colors.white), textAlign: TextAlign.center,),)
+        ),
+        ListTile(
+          leading: Image.asset("assets/about.png", height: 35,),
+          title:Text("About", style: GoogleFonts.josefinSans(fontSize: 24),),
+        ),
+         ListTile(
+          leading: Image.asset("assets/rate.png", height: 32,),
+          title:Text("Rate", style: GoogleFonts.josefinSans(fontSize: 24),),
+        ),
+         ListTile(
+          leading: Image.asset("assets/share.png", height: 32,),
+          title:Text("Share", style: GoogleFonts.josefinSans(fontSize: 24),),
+        )
+      ],
+    ),
   ),
 
 body: Column(
